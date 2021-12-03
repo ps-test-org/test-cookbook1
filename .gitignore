@@ -1,0 +1,14 @@
+---
+name: chef-cookbook-linting
+
+on:
+  schedule:
+    - cron: 20 07 * * 1
+  pull_request:
+  push:
+    branches:
+      - master
+
+jobs:
+  rubygem-linting:
+    uses: tecracer-chef/.github/.github/workflows/chef-cookbook-linting.yml@master
